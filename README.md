@@ -4,7 +4,7 @@
 <h3>About build.sh</h3>
 
 ```
-./build.sh all
+./build.sh lessiso
 ```
 
 it will compile linux kernel, initramfs, but do not generate a .iso file
@@ -37,7 +37,7 @@ it will clean vmlinuz (compiled), initramfs of iso/boot or src
 ./build.sh clean nLinux
 ```
 
-it will clean linux kernel, initramfs, iso file.
+it will clean linux kernel, initramfs, iso files.
 
 <h3>About Me!</h3>
 
