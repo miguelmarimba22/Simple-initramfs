@@ -44,13 +44,7 @@ genIso() {
 	grub-mkrescue iso -o ./$(jq -r '.Name' ./var.json).iso
 }
 
-if [ "$1" = "vmlinuz" ]; then
-	genVmlinuz
-elif [ "$1" = "initramfs" ]; then
-	genInit
-elif [ "$1" = "geniso" ]; then
-	genIso
-elif [ "$1" = "clean" ]; then
+clean() {
 	if [ "$2" = "nLinux" ]; then		
 		cd ./linux-6.14.1
 		make clean
@@ -62,7 +56,17 @@ elif [ "$1" = "clean" ]; then
 	rm -rf ./src/*
 	rm -f ./iso/boot/*
 	rm -r $(find * | grep *.iso) 
-elif [ "$1" = "all" ]; then
+}
+
+if [ "$1" = "vmlinuz" ]; then
+	genVmlinuz
+elif [ "$1" = "initramfs" ]; then
+	genInit
+elif [ "$1" = "geniso" ]; then
+	genIso
+elif [ "$1" = "clean" ]; then
+	clean
+elif [ "$1" = "lessiso" ]; then
 	genVmlinuz
 	genInit
 else
