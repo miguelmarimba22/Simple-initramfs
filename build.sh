@@ -65,7 +65,6 @@ elif [ "$1" = "clean" ]; then
 elif [ "$1" = "all" ]; then
 	genVmlinuz
 	genInit
-	genIso
 else
 	echo "See the README.MD"
 fi
