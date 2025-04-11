@@ -7,7 +7,7 @@
 ./build.sh all
 ```
 
-it will compile linux kernel, initramfs and generate iso file with grub
+it will compile linux kernel, initramfs, but do not generate a .iso file
 
 ```
 ./build.sh vmlinuz
