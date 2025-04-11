@@ -57,7 +57,7 @@ elif [ "$1" = "clean" ]; then
 		cd ..
 	fi
 	
-	echo "Limpado com sucesso"
+	echo "cleaned with sucess"
 	rm -rf ./initramfs
 	rm -rf ./src/*
 	rm -f ./iso/boot/*
