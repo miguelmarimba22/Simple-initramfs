@@ -1,0 +1,44 @@
+# Simple-initramfs
+
+
+<h3>About build.sh</h3>
+
+```
+./build.sh all
+```
+
+it will compile linux kernel, initramfs and generate iso file with grub
+
+```
+./build.sh vmlinuz
+```
+
+it will compile only vmlinuz
+
+```
+./build.sh initramfs
+```
+
+it will compress initramfs using cpio in newc and gzip.
+
+```
+./build.sh geniso
+```
+
+it will generate a iso using grub-mkrescue
+
+```
+./build.sh clean
+```
+
+it will clean vmlinuz (compiled), initramfs of iso/boot or src
+
+```
+./build.sh clean nLinux
+```
+
+it will clean linux kernel, initramfs, iso file.
+
+<h3>About Me!</h3>
+
+i'm learing about linux, how it work, so i did this to test my capacities
